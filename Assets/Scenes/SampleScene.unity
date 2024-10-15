@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -910,14 +910,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: perro_sandia
+  mTrackableName: target
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1.0742425
+  mAspectRatio: 1
   mImageTargetType: 3
-  mWidth: 0.18617772
+  mWidth: 0.2
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 6caebb48defd22144a87a50085958d43, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 69400d9147524d24b8c9ec35f30cf9e2, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -952,7 +952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1138536938}
   mHiddenRoot: {fileID: 0}
-  mTargetName: perro_sandia
+  mTargetName: target
   mDatasetName: 
   mCastedBehaviour: {fileID: 1138536938}
   mMeshFilter: {fileID: 0}
