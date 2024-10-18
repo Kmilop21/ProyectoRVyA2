@@ -888,14 +888,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: target
+  mTrackableName: planta
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1
   mImageTargetType: 3
-  mWidth: 0.2
-  mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 69400d9147524d24b8c9ec35f30cf9e2, type: 3}
+  mWidth: 0.20000002
+  mHeight: 0.20000002
+  mRuntimeTexture: {fileID: 2800000, guid: 5935b43718308e9478e0fc821424a8b4, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -928,6 +928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba05915a38e78e34cbebd034369c5774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hola: 0
 --- !u!114 &655270496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -942,7 +943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 655270493}
   mHiddenRoot: {fileID: 0}
-  mTargetName: target
+  mTargetName: planta
   mDatasetName: 
   mCastedBehaviour: {fileID: 655270493}
   mMeshFilter: {fileID: 0}

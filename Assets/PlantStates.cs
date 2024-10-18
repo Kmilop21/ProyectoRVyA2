@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class PlantStates : MonoBehaviour
 {
-    
+    public int hola;
+    public enum Directions { SMALL,MID,MAX };
+    public Directions tall;
+
     private Animator plantAnimator;
+    private float timer;
     
     // Start is called before the first frame update
     void Start()
@@ -13,19 +17,87 @@ public class PlantStates : MonoBehaviour
 
         plantAnimator = transform.GetChild(0).gameObject.GetComponent<Animator>(); 
     }
-    
+    private void Update()
+    {
+        timer +=Time.deltaTime;
+    }
     public void Small()
     {
-        plantAnimator.SetTrigger("Small");
+        if ( timer > 1)
+        {
+            if (tall != Directions.SMALL )
+            {
+                if (tall == Directions.MID)
+                {
+                    plantAnimator.SetTrigger("Small");
+                    timer = 0;
+                    tall = Directions.SMALL;
+
+                }
+                if (tall == Directions.MAX)
+                {
+                    plantAnimator.SetTrigger("MaxMin");
+                    timer = 0;
+                    tall = Directions.SMALL;
+
+                }
+            }
+        }
+        
+        
     }
     public void Mid()
     {
-        plantAnimator.SetTrigger("Mid");
+        if (timer > 1)
+        {
+            if (tall != Directions.MID)
+            {
+                
+                if (tall == Directions.SMALL)
+                {
+                    plantAnimator.SetTrigger("Mid");
+                    timer = 0;
+                    tall = Directions.MID;
+
+                }
+                else if (tall == Directions.MAX)
+                {
+                    plantAnimator.SetTrigger("Max to Mid");
+                    timer = 0;
+                    tall = Directions.MID;
+                }
+            }
+        }
+        
+        
     }
     public void Max()
     {
-        plantAnimator.SetTrigger("Max");
+        if (timer > 1)
+        {
+            if (tall != Directions.MAX)
+            {
+                if (tall == Directions.SMALL)
+                {
+                    plantAnimator.SetTrigger("MinMax");
+                    tall = Directions.MAX;
+                    timer = 0;
+
+                }
+                if (tall == Directions.MID)
+                {
+                    plantAnimator.SetTrigger("Max");
+                    tall = Directions.MAX;
+                    timer = 0;
+
+                }
+
+                
+            }
+        }
+        
+        
+        
     }
-    // Update is called once per frame
-    
+
 }
